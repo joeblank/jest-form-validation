@@ -12,6 +12,11 @@ export default class Person extends Component {
             isRetiree: 'unknown'
         }
     }
+    componentDidMount() {
+        console.log(this.props)
+        let dateObj = new Date(`01/01/${this.props.birthyear}`)
+        this.calculateAge(dateObj)
+    }
     isMillennail() {
         this.setState({
             isMillennail: this.props.person.birthyear > 1982 ? 'Yes':'No'
@@ -26,6 +31,7 @@ export default class Person extends Component {
         let ageDiffMs = Date.now() - birthdate.getTime()
         let ageDate = new Date(ageDiffMs);
         let age = ageDate.getUTCFullYear() - 1970;
+        console.log('age', age)
         this.setState({age});
     }
     render() {
