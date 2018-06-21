@@ -22,14 +22,12 @@ export default class Form extends React.Component {
         })
     }
 
+    // update
     ageCheck(age) {
-        age = +age;
-        if(typeof age !== 'number' || age > 110 || age < 18) return false;
         return true;
     }
+    // update
     emailCheck(email) {
-        let symbolIndex = email.indexOf('@');
-        if (symbolIndex === -1) return false;
         return true;
     }
 
