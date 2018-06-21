@@ -22,9 +22,11 @@ export default class Form extends React.Component {
         })
     }
 
+    // update
     ageCheck(age) {
         return true;
     }
+    // update
     emailCheck(email) {
         return true;
     }
